@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PDO Global Home Page</title>
+    <meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="splash/script.js"></script>
+
+    <link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='bower_components/fontawesome/css/font-awesome.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="splash/img/small-pdo-black.png">
+    <link href='splash/splash.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container"
+     style="background-color: white; width: inherit; padding-left: 8em; padding-right: 8em;">
+    <nav class="navbar" id="top-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img alt="Brand" src="splash/img/Go-Further-White.png" id="ford-logo">
+            </div>
+            <div class="navbar-form navbar-right" style="padding: 0;">
+                <div>
+                    <a target="_blank" href="http://www.csps.ford.com" id="toprequestlink"
+                       class="navbar-brand pull-right">Request PDO Access</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-inverse" id="menu-bar">
+        <ul class="nav navbar-nav pull-right">
+            <li>
+                <a data-toggle="dropdown" href='#' style="color: white; margin-right: 80px;">MENU <i class="fa fa-bars"></i></a>
+                <ul id="menu" class='dropdown-menu dropdown-menu-right'>
+                    <li class='dropdown-header' style='color: #29ABE2;'>APPLICATIONS</li>
+                    <li><a target="_blank" id="changemanagementmenu" class="pdorequestmanagement" href='https://www.pdorequestmgmnt.ford.com'>Change Management</a></li>
+                    <li><a target="_blank" id="mixratesmenu" class="pdomixrates" href='https://www.pdomixrates.ford.com'>Mix - Rate - Price</a></li>
+                    <li><a  target="_blank" class="proddef" id="proddefmenu" href='https://www.pdo.ford.com'>Product Definition</a></li>
+                    <li class='dropdown-header' style='color: #8CC63F;'>RESOURCES</li>
+                    <li><a target="_blank" href='https://comm.sp.ford.com/sites/PDOR2ResourceCenter/Pages/Latest%20e-News.aspx'>e-Newsletters</a></li>
+                    <li><a target="_blank" href='https://comm.sp.ford.com/sites/PDOR2ResourceCenter/Pages/Home.aspx'>Resource Center</a></li>
+                    <li><a target="_blank" href='https://comm.sp.ford.com/sites/PDOR2ResourceCenter/Pages/User%20Guides.aspx'>User Guides</a></li>
+                    <li><a target="_blank" href='https://comm.sp.ford.com/sites/PDOR2ResourceCenter/Pages/Video-Tutorials.aspx'>Video Tutorials</a></li>
+                    <li class='dropdown-header' style='color: #FBB03B;'>SYSTEM</li>
+                    <li><a target="_blank" id="adminlink" href='https://www.pdosecurity.ford.com'>Admin/Security</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid" style="padding: 0; margin: 0;">
+        <div class="row">
+            <div class="col-sm-12 back-banner">
+                <img class="img-responsive banner" src="splash/img/pdo-tagline.png" alt="PDO">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron" id="button-zone">
+                    <hr>
+                    <h1 class="access">Learn How to Access PDO</h1>
+                    <button type="button" class="btn btn-primary btn-lg movie" data-toggle="modal"
+                            data-target="#videoModal">
+                        Watch Video <i class="fa fa-play-circle"></i>
+                    </button>
+                    <a type="button" target="_blank" href="https://comm.sp.ford.com/sites/PDOR2ResourceCenter/Documents/Instructions%20Infographic%20for%20How%20to%20Access%20PDO%20web%20edition.pdf
+                    " class="btn btn-lg pdf">Open PDF
+                        <i class="fa fa-file-pdf-o"></i></a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 roll-up">
+            <img class="img-responsive" src="splash/img/pd-resize.png" alt="GT">
+            <div class="rolledUpMessage">
+                <h3>Product Definition</h3>
+                <div>
+                    <p>Serves as the single global source of truth for authored product feature data that
+                        Ford will engineer and sell.</p>
+                  <a target="_blank" id="proddefinitionlink" href="https://www.pdo.ford.com"><button type="button" id="proddefinitionbutton" class="btn btn-lg pdo" style="background-color: #29ABE2;">
+                        Go to application <i class="fa fa-arrow-circle-right"></i></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 roll-up">
+            <img class="img-responsive" src="splash/img/pricing-resize.png" alt="HR">
+            <div class="rolledUpMessage">
+                <h3>Mix, Rate, & Price</h3>
+                <div>
+                    <p>Advances the ability for Marketing and Pricing to make
+                        informed decisions faster by enabling accurate mix, rate
+                        and price capture, aligned with product definition.</p>
+                        <a target="_blank" id="mixratesbutton" href="https://www.pdomixrates.ford.com"><button type="button" id="mixratelink" class="btn btn-lg pdo" style="background-color: #8CC63F;">
+                              Go to application <i class="fa fa-arrow-circle-right"></i></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 roll-up">
+            <img class="img-responsive" src="splash/img/cm-resize.png" alt="CM">
+
+            <div class="rolledUpMessage">
+                <h3>Change Management</h3>
+                <div>
+                    <p>Delivers value by providing global visibility and
+                        efficient coordination of program intent changes across all
+                        vehicle programs around the world.</p>
+                        <a target="_blank" id="changemanagementbutton" href="https://www.pdorequestmgmnt.ford.com"><button type="button" id="changemanagementbuttonlink" class="btn btn-lg pdo" style="background-color: #FBB03B;">
+                              Go to application <i class="fa fa-arrow-circle-right"></i></button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="videoModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button onclick="pauseVid()" type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+                <div class="modal-body">
+                    <video id="vid" controls style="width: 100%;">
+                        <source src="splash/videos/How_to_Access_PDO.mp4" type="video/mp4">
+                        Video goes here
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
